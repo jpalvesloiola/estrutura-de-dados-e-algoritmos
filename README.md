@@ -1,4 +1,4 @@
-# Estrutura de Dados e Algoritmos com Java
+# [Estrutura de Dados e Algoritmos com Java](arrays)
 ## Conteúdo do curso: Estrutura de dados.
 - Vetores(Arrays); 
 - Pilhas(Stacks);
@@ -37,4 +37,7 @@
   >_Conjuntos_.
 - Organizar relacionamentos de redes sociais, Twitter e Facebook por exemplo e GPSs:
   >_Grafos_.
+[id]: /arrays  "Vetor"
+#Vetor    
+
 
