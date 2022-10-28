@@ -18,7 +18,7 @@
   - Merge Sort;
   - Quick Sort.
 - Algoritmos de Busca e Pesquisa:
-  - Busca Sequêncial;
+  - Busca Sequêncial✅
   - Busca Binária.
  
 ## Definição de Estruturas de Dados.
@@ -45,7 +45,7 @@ Objetivos:
 - Verificar quantidades de elementos no vetor✅
 - Imprimir elementos do vetor✅
 - Obter elemento de uma posição do vetor✅
-- Verificar se elemento existe no vetor
+- Verificar se elemento existe no vetor✅
 - Adicionar elemento em qualquer posição do vetor
 - Adicionar mais capacidade ao vetor
 - Remover elemento do vetor
