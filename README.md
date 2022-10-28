@@ -1,14 +1,14 @@
-# [Estrutura de Dados e Algoritmos com Java](arrays)
+# **Estrutura de Dados e Algoritmos com Java**
 ## Conteúdo do curso: Estrutura de dados.
-- Vetores(Arrays); 
-- Pilhas(Stacks);
-- Fila(Queues);
-- Lista Encadeadas(Linked Lists);
-- Lista Duplamente Encadeadas(Doubly Linked Lists);
-- Conjuntos(Sets);
-- Tabelas de Hashing(Hashing Tables);
-- Árvores(Trees);
-- Grafos(Graphs).
+- Vetore(Array); 
+- Pilha(Stack);
+- Fila(Queue);
+- Lista Encadeada(Linked List);
+- Lista Duplamente Encadeadas(Doubly Linked List);
+- Conjunto(Set);
+- Tabela de Hashing(Hashing Table);
+- Árvore(Tree);
+- Grafo(Graph).
  
 ## Conteúdo do curso: Algoritmos.
 - Algoritmos de Ordenação:
@@ -37,7 +37,24 @@
   >_Conjuntos_.
 - Organizar relacionamentos de redes sociais, Twitter e Facebook por exemplo e GPSs:
   >_Grafos_.
-[id]: /arrays  "Vetor"
-#Vetor    
+
+# Vetor
+Objetivos:
+- Definição✅
+- Adicionar elementos ao final do vetor✅
+- Verificar quantidades de elementos no vetor✅
+- Imprimir elementos do vetor✅
+- Obter elemento de uma posição do vetor
+- Verificar se elemento existe no vetor
+- Adicionar elemento em qualquer posição do vetor
+- Adicionar mais capacidade ao vetor
+- Remover elemento do vetor
+- Generalizar tipos dos elementos no vetor
+- Definir tipo do vetor dinamicamente
+- API java ArrayList
+- Exercícios
+
+
+
 
 
