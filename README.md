@@ -46,8 +46,8 @@ Objetivos:
 - Imprimir elementos do vetor✅
 - Obter elemento de uma posição do vetor✅
 - Verificar se elemento existe no vetor✅
-- Adicionar elemento em qualquer posição do vetor
-- Adicionar mais capacidade ao vetor
+- Adicionar elemento em qualquer posição do vetor✅
+- Adicionar mais capacidade ao vetor✅
 - Remover elemento do vetor
 - Generalizar tipos dos elementos no vetor
 - Definir tipo do vetor dinamicamente
