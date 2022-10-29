@@ -1,29 +1,20 @@
 package com.loiane.estruturadados.vetor;
 
 public class Vetor {
-	private String[] elementos;
+	private Object[] elementos;
 	private int tamanho;
 
 	public Vetor(int capacidade) {
-		this.elementos = new String[capacidade];
+		this.elementos = new Object[capacidade];
 		this.tamanho = 0;
 	}
-
-//	public void adiciona(String elemento) {
-//		for (int i = 0; i < elementos.length; i++) {
-//			if (elementos[i] == null) {
-//				elementos[i] = elemento;
-//				break;
-//			}
-//		}
-//	}
 
 	/**
 	 * Adiciona elemento ao final do vetor
 	 * 
 	 * @param elemento
 	 */
-	public void adiciona(String elemento) {
+	public void adiciona(Object elemento) {
 		this.aumentaCapacidade();
 		if (this.tamanho < this.elementos.length) {
 			this.elementos[this.tamanho] = elemento;
@@ -38,7 +29,7 @@ public class Vetor {
 	 * @param elemento
 	 * @param posicao
 	 */
-	public void adiciona(String elemento, int posicao) {
+	public void adiciona(Object elemento, int posicao) {
 		this.validaPosicao(posicao);
 
 		this.aumentaCapacidade();
@@ -69,7 +60,7 @@ public class Vetor {
 	 * @param posicao
 	 * @return elemento
 	 */
-	public String busca(int posicao) {
+	public Object busca(int posicao) {
 		this.validaPosicao(posicao);
 		return this.elementos[posicao];
 	}
@@ -81,7 +72,7 @@ public class Vetor {
 	 * @param elemento
 	 * @return posicao ou -1 se nada for encontrado.
 	 */
-	public int busca(String elemento) {
+	public int busca(Object elemento) {
 
 		for (int i = 0; i < elementos.length; i++) {
 			if (elementos[i].equals(elemento)) {
@@ -98,7 +89,7 @@ public class Vetor {
 	 */
 	private void aumentaCapacidade() {
 		if (this.tamanho == this.elementos.length) {
-			String[] novoElementos = new String[this.elementos.length * 2];
+			Object[] novoElementos = new Object[this.elementos.length * 2];
 			for (int i = 0; i < this.elementos.length; i++) {
 				novoElementos[i] = this.elementos[i];
 			}
