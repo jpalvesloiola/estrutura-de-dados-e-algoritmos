@@ -48,13 +48,12 @@
 - Adicionar elemento em qualquer posição do vetor✅
 - Adicionar mais capacidade ao vetor✅
 - Remover elemento do vetor✅
-- Generalizar tipos dos elementos no vetor
+- Generalizar tipos dos elementos no vetor✅
 - Definir tipo do vetor dinamicamente
 - API java ArrayList
 - Exercícios
 
 # Pilha
-Objetivos:
 - Definição
 - Adicionar elementos ao final do vetor
 - Verificar quantidades de elementos no vetor
@@ -70,7 +69,6 @@ Objetivos:
 - Exercícios
 
 # Fila
-Objetivos:
 - Definição
 - Adicionar elementos ao final do vetor
 - Verificar quantidades de elementos no vetor
@@ -86,7 +84,6 @@ Objetivos:
 - Exercícios
 
 # Lista Encadeada
-Objetivos:
 - Definição
 - Adicionar elementos ao final do vetor
 - Verificar quantidades de elementos no vetor
@@ -102,7 +99,6 @@ Objetivos:
 - Exercícios
 
 # Lista Duplamente Encadeada
-Objetivos:
 - Definição
 - Adicionar elementos ao final do vetor
 - Verificar quantidades de elementos no vetor
@@ -118,7 +114,6 @@ Objetivos:
 - Exercícios
 
 # Tabela de Hashing
-Objetivos:
 - Definição
 - Adicionar elementos ao final do vetor
 - Verificar quantidades de elementos no vetor
@@ -134,7 +129,6 @@ Objetivos:
 - Exercícios
 
 # Conjunto
-Objetivos:
 - Definição
 - Adicionar elementos ao final do vetor
 - Verificar quantidades de elementos no vetor
@@ -150,7 +144,6 @@ Objetivos:
 - Exercícios
 
 # Árvore
-Objetivos:
 - Definição
 - Adicionar elementos ao final do vetor
 - Verificar quantidades de elementos no vetor
@@ -166,7 +159,6 @@ Objetivos:
 - Exercícios
 
 # Grafo
-Objetivos:
 - Definição
 - Adicionar elementos ao final do vetor
 - Verificar quantidades de elementos no vetor
