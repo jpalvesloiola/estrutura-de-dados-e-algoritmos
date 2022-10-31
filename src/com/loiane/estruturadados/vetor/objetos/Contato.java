@@ -24,6 +24,17 @@ public class Contato {
 		return Objects.hash(email, nome, numero);
 	}
 
-	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Contato other = (Contato) obj;
+		return Objects.equals(email, other.email) && Objects.equals(nome, other.nome)
+				&& Objects.equals(numero, other.numero);
+	}
 
 }
