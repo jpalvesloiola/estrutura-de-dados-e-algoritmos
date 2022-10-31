@@ -49,7 +49,7 @@
 - Adicionar mais capacidade ao vetor✅
 - Remover elemento do vetor✅
 - Generalizar tipos dos elementos no vetor✅
-- Definir tipo do vetor dinamicamente
+- Definir tipo do vetor dinamicamente✅
 - API java ArrayList
 - Exercícios
 
