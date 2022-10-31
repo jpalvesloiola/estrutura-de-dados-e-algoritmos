@@ -5,7 +5,7 @@ public class Vetor {
 	private int tamanho;
 
 	public Vetor(int capacidade) {
-		this.elementos = new Object[capacidade];
+		this.elementos = new Object [capacidade];
 		this.tamanho = 0;
 	}
 
@@ -66,11 +66,11 @@ public class Vetor {
 	}
 
 	/**
-	 * Verifica se elemento existe no vetor e retorna a posicao. Sbreescrita do
+	 * Verifica se elemento existe no vetor com busca sequencial e retorna a posicao. Sbreescrita do
 	 * metodo anterior. Algoritmo de busca sequencial.
 	 * 
 	 * @param elemento
-	 * @return posicao ou -1 se nada for encontrado.
+	 * @return inteiro >= 0 (posicao) ou -1 se nada for encontrado.
 	 */
 	public int busca(Object elemento) {
 
