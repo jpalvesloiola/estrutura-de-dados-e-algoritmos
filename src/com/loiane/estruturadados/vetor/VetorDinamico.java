@@ -43,9 +43,9 @@ public class VetorDinamico<T> {
 	}
 
 	/**
-	 * Remove um elemento do Vetor
+	 * Remove um elemento do Vetor de acordo com o indice passado como parametro.
 	 * 
-	 * @param posicao
+	 * @param posicao .
 	 */
 	public void remove(int posicao) {
 		this.validaPosicao(posicao);
@@ -54,6 +54,28 @@ public class VetorDinamico<T> {
 		}
 		this.tamanho--;
 	}
+	
+	/**
+	 * Remove um elemento do Vetor de acordo com o elemento passado como parametro.
+	 * 
+	 * @param elemento a ser removido.
+	 */
+	public void remove(T elemento) {
+		int posicao = this.busca(elemento);
+		if (posicao > -1) {
+			this.remove(posicao);
+		}else {
+			return;
+		}
+		
+	}
+	
+	public void limpar() {
+		for (int i = 0; i < this.elementos.length; i++) {
+			this.elementos[i] = null;
+		}
+		this.tamanho = 0;
+	}
 
 	/**
 	 * Obtem elemento em uma posição do vetor
@@ -61,13 +83,13 @@ public class VetorDinamico<T> {
 	 * @param posicao
 	 * @return elemento
 	 */
-	public Object busca(int posicao) {
+	public T busca(int posicao) {
 		this.validaPosicao(posicao);
 		return this.elementos[posicao];
 	}
 
 	/**
-	 * Verifica se elemento existe no vetor com busca sequencial e retorna a
+	 * Verifica se elemento existe no vetor e retorna a
 	 * posicao. Sbreescrita do metodo anterior. Algoritmo de busca sequencial.
 	 * 
 	 * @param elemento
@@ -75,12 +97,32 @@ public class VetorDinamico<T> {
 	 */
 	public int busca(T elemento) {
 
-		for (int i = 0; i < elementos.length; i++) {
+		for (int i = 0; i < this.tamanho; i++) {
 			if (elementos[i].equals(elemento)) {
 				return i;
 			}
 		}
 
+		return -1;
+	}
+	
+	/**
+	 * Verifica se elemento existe no vetor com busca sequencial.
+	 * @param elemento
+	 * @return true de existe ou false senao existe.
+	 */
+	public boolean contem(T elemento) {
+
+		return busca(elemento) > -1;
+	}
+	
+	public int ultimoIndice(T elemento) {
+		
+		for (int i = this.tamanho - 1; i >= 0; i--) {
+			if (elementos[i].equals(elemento)) {
+				return i;
+			}
+		}
 		return -1;
 	}
 
@@ -116,13 +158,11 @@ public class VetorDinamico<T> {
 		string.append("[");
 		for (int i = 0; i < this.tamanho; i++) {
 			string.append(this.elementos[i]);
-			if (i != this.tamanho - 1) {
+			if (i < this.tamanho) {
 				string.append(", ");
-			} else {
-				string.append("]");
-			}
+			} 
 		}
-
+		string.append("]");
 		return string.toString();
 	}
 }

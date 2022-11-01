@@ -17,6 +17,8 @@ public class Aula12 {
 		arrayList.add(c2);
 		arrayList.add(c3);
 		
+		arrayList.clear();
+		
 		arrayList.contains(c1);
 		
 		int posicao = arrayList.indexOf(c1);
