@@ -50,7 +50,7 @@
 - Remover elemento do vetor✅
 - Generalizar tipos dos elementos no vetor✅
 - Definir tipo do vetor dinamicamente✅
-- API java ArrayList
+- API java ArrayList✅
 - Exercícios
 
 # Pilha
