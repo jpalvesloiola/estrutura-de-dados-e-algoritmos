@@ -12,7 +12,7 @@ public class Exer05 {
 		vetor.adiciona("B");
 		vetor.adiciona("A");
 
-		vetor.limpar();
+		vetor.limpa();
 
 		System.out.println(vetor);
 

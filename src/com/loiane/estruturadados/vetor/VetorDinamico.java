@@ -24,7 +24,7 @@ public class VetorDinamico<T> {
 	}
 
 	/**
-	 * Adiciona elemento em qualquer posição do vetor. Sobrecarga do metodo
+	 * Adiciona elemento na posição desejada do vetor. Sobrecarga do metodo
 	 * anterior.
 	 * 
 	 * @param elemento
@@ -70,7 +70,10 @@ public class VetorDinamico<T> {
 		
 	}
 	
-	public void limpar() {
+	/**
+	 * Limpa todos os elementos da array. 
+	 */
+	public void limpa() {
 		for (int i = 0; i < this.elementos.length; i++) {
 			this.elementos[i] = null;
 		}
@@ -116,6 +119,11 @@ public class VetorDinamico<T> {
 		return busca(elemento) > -1;
 	}
 	
+	/**
+	 * Passa a ultima ocorrencia do elemento no vetor
+	 * @param elemento
+	 * @return
+	 */
 	public int ultimoIndice(T elemento) {
 		
 		for (int i = this.tamanho - 1; i >= 0; i--) {
