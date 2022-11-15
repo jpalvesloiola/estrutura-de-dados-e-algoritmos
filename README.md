@@ -61,6 +61,7 @@
 - Espiar/Verificar se elemento está no topo da pilha
 - Desempilhar elemento da pilha
 - API Java Stack
+- Exercícios
 
 # Fila
 - Definição
