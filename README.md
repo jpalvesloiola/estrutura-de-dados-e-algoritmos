@@ -1,6 +1,6 @@
 # **Estrutura de Dados e Algoritmos com Java**
 ## Conteúdo do curso: Estrutura de dados.
-- [Vetor(Array)][vetor] 
+- [Vetor(Array)][vetor] ✅
 - [Pilha(Stack)][pilha]
 - [Fila(Queue)][fila]
 - [Lista Encadeada(Linked List)][lista-encadeada]
@@ -38,7 +38,7 @@
 - Organizar relacionamentos de redes sociais, Twitter e Facebook por exemplo e GPSs:
   >_Grafos_.
 
-# Vetor
+# Vetor (Array)
 - Definição✅
 - Adicionar elementos ao final do vetor✅
 - Verificar quantidades de elementos no vetor✅
@@ -51,25 +51,19 @@
 - Generalizar tipos dos elementos no vetor✅
 - Definir tipo do vetor dinamicamente✅
 - API java ArrayList✅
-- Exercícios
+- Exercícios✅
 
-# Pilha
+# Pilha (Stack)
 - Definição
-- Adicionar elementos ao final do vetor
-- Verificar quantidades de elementos no vetor
-- Imprimir elementos do vetor
-- Obter elemento de uma posição do vetor
-- Verificar se elemento existe no vetor
-- Adicionar elemento em qualquer posição do vetor
-- Adicionar mais capacidade ao vetor
-- Remover elemento do vetor
-- Generalizar tipos dos elementos no vetor
-- Definir tipo do vetor dinamicamente
-- API java ArrayList
-- Exercícios
+- Verificar quantidades de elementos na pilha
+- Empilhar elemento
+- Verificar se a pilha está vazia
+- Espiar/Verificar se elemento está no topo da pilha
+- Desempilhar elemento da pilha
+- API Java Stack
 
 # Fila
-- Definição
+- Definição✅
 - Adicionar elementos ao final do vetor
 - Verificar quantidades de elementos no vetor
 - Imprimir elementos do vetor
