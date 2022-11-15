@@ -1,27 +1,24 @@
 package com.loiane.estruturadados.vetor.labs;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
-import com.loiane.estruturadados.vetor.VetorDinamico;
+
 import com.loiane.estruturadados.vetor.objetos.Contato;
 
-public class Exer06 {
+public class Exer07 {
 
 	public static void main(String[] args) {
 		var entrada = new Scanner(System.in);
 
 		int quantidade = obtemNumeroDeContatos(entrada);
 
-		VetorDinamico<Contato> vetor = criaVetor(quantidade);
+		ArrayList<Contato> vetor = new ArrayList<>(quantidade);
+		
 
 //		criaContatos(vetor, quantidade);
 
 		obterOpcaoMenu(entrada, vetor);
-	}
-
-	private static VetorDinamico<Contato> criaVetor(int quantidade) {
-		VetorDinamico<Contato> vetor = new VetorDinamico<>(quantidade);
-		return vetor;
 	}
 
 	private static int obtemNumeroDeContatos(Scanner entrada) {
@@ -42,7 +39,7 @@ public class Exer06 {
 		return quantidade;
 	}
 
-	protected static void obterOpcaoMenu(Scanner entrada, VetorDinamico<Contato> vetor) {
+	protected static void obterOpcaoMenu(Scanner entrada, ArrayList<Contato> vetor) {
 
 		int opcao = 0;
 		boolean entradaValida = false;
@@ -79,7 +76,7 @@ public class Exer06 {
 		}
 	}
 
-	private static void processaOpcaoEscolhida(Scanner entrada, VetorDinamico<Contato> vetor, int opcao) {
+	private static void processaOpcaoEscolhida(Scanner entrada, ArrayList<Contato> vetor, int opcao) {
 
 		switch (opcao) {
 		case 0:
@@ -99,7 +96,7 @@ public class Exer06 {
 			break;
 		case 5:
 			System.out.println("Limpando a lista de Contatos...");
-			vetor.limpa();
+			vetor.clear();
 			break;
 		case 6:
 			obtemContatoPorInfo(entrada, vetor);
@@ -114,7 +111,7 @@ public class Exer06 {
 			ultimaOcorrencia(entrada, vetor);
 			break;
 		case 10:
-			System.out.println("Numero de Contatos: " + vetor.tamanho());
+			System.out.println("Numero de Contatos: " + vetor.size());
 			break;
 		case 11:
 			System.out.println("Lista de Contatos: ");
@@ -126,20 +123,20 @@ public class Exer06 {
 		}
 	}
 
-	private static void removeElementoPorPosicao(Scanner entrada, VetorDinamico<Contato> vetor) {
+	private static void removeElementoPorPosicao(Scanner entrada, ArrayList<Contato> vetor) {
 		int posicao;
 		posicao = Integer.parseInt(leInformacao("Digite a posicao do elemento que deseje remover: ", entrada));
 		vetor.remove(posicao);
 	}
 
-	private static void ultimaOcorrencia(Scanner entrada, VetorDinamico<Contato> vetor) {
+	private static void ultimaOcorrencia(Scanner entrada, ArrayList<Contato> vetor) {
 		int posicao;
 		System.out.println("***Ultimo ocorrencia do contato.***");
 		String nome = leInformacao("Digite o nome do contato:", entrada);
 		String email = leInformacao("Digite o email do contato:", entrada);
 		String numero = leInformacao("Digite o numero do contato:", entrada);
 		Contato contato = new Contato(nome, email, numero);
-		posicao = vetor.ultimoIndice(contato);
+		posicao = vetor.lastIndexOf(contato);
 		if (posicao < 0) {
 			System.out.println("Nao existe este contato!");
 		} else {
@@ -147,14 +144,14 @@ public class Exer06 {
 		}
 	}
 
-	private static void contemContato(Scanner entrada, VetorDinamico<Contato> vetor) {
+	private static void contemContato(Scanner entrada, ArrayList<Contato> vetor) {
 		System.out.println("***Contem contato?***");
 
 		String nome = leInformacao("Digite o nome do contato:", entrada);
 		String email = leInformacao("Digite o email do contato:", entrada);
 		String numero = leInformacao("Digite o numero do contato:", entrada);
 		Contato contato = new Contato(nome, email, numero);
-		if (vetor.contem(contato)) {
+		if (vetor.contains(contato)) {
 			System.out.println("Elemento nao existe!");
 		} else {
 			System.out.println("Elemento existe");
@@ -173,13 +170,13 @@ public class Exer06 {
 		
 	}
 
-	private static void obtemContatoPorInfo(Scanner entrada, VetorDinamico<Contato> vetor) {
+	private static void obtemContatoPorInfo(Scanner entrada, ArrayList<Contato> vetor) {
 		System.out.println("***Obtem contato por informacoes.***");
 		String nome = leInformacao("Digite o nome do contato:", entrada);
 		String email = leInformacao("Digite o email do contato:", entrada);
 		String numero = leInformacao("Digite o numero do contato:", entrada);
 		Contato contato = new Contato(nome, email, numero);
-		int posicao = vetor.busca(contato);
+		int posicao = vetor.indexOf(contato);
 		if (posicao < 0) {
 			System.out.println("Elemento nao encontrado!");
 		} else {
@@ -187,15 +184,15 @@ public class Exer06 {
 		}
 	}
 
-	private static void obtemContatoPelaPosicao(Scanner entrada, VetorDinamico<Contato> vetor) {
+	private static void obtemContatoPelaPosicao(Scanner entrada, ArrayList<Contato> vetor) {
 		int posicao;
 		System.out.println("***Obtem contato pela posicao.***");
 		System.out.println("Digite a posicao do contato:");
 		posicao = entrada.nextInt();
-		System.out.println("Contato na posicao: " + vetor.busca(posicao));
+		System.out.println("Contato na posicao: " + vetor.get(posicao));
 	}
 
-	private static void removeContato(Scanner entrada, VetorDinamico<Contato> vetor) {
+	private static void removeContato(Scanner entrada, ArrayList<Contato> vetor) {
 		System.out.println("***Remove o contato passado como parametro.***");
 		String nome = leInformacao("Digite o nome do contato:", entrada);
 		String email = leInformacao("Digite o email do contato:", entrada);
@@ -205,28 +202,28 @@ public class Exer06 {
 		System.out.println("Contato removido com sucesso!");
 	}
 
-	private static void adicionaQulaquerPosicaoDaLista(Scanner entrada, VetorDinamico<Contato> vetor) {
+	private static void adicionaQulaquerPosicaoDaLista(Scanner entrada, ArrayList<Contato> vetor) {
 		System.out.println("***Adiciona contato na posicao desejada.***");
 		int posicao = Integer.parseInt(leInformacao("Digite a posicao do contato:", entrada));
 		String nome = leInformacao("Digite o nome do contato:", entrada);
 		String email = leInformacao("Digite o email do contato:", entrada);
 		String numero = leInformacao("Digite o numero do contato:", entrada);
 		Contato contato = new Contato(nome, email, numero);
-		vetor.adiciona(contato, posicao);
+		vetor.add(posicao, contato);
 		System.out.println("Contato adicionado com sucesso!");
 	}
 
-	private static void adicionaFinalDaLista(Scanner entrada, VetorDinamico<Contato> vetor) {
+	private static void adicionaFinalDaLista(Scanner entrada, ArrayList<Contato> vetor) {
 		System.out.println("***Adicionar contato no final da lista.***");
 		String nome = leInformacao("Digite o nome do contato:", entrada);
 		String email = leInformacao("Digite o email do contato:", entrada);
 		String numero = leInformacao("Digite o numero do contato:", entrada);
 		Contato contato = new Contato(nome, email, numero);
-		vetor.adiciona(contato);
+		vetor.add(contato);
 		System.out.println("Contato adicionado com sucesso!");
 	}
 
-//	public static void criaContatos(VetorDinamico<Contato> vetor, int capacidade) {
+//	public static void criaContatos(ArrayList<Contato> vetor, int capacidade) {
 //		for (int i = 0; i < capacidade; i++) {
 //			vetor.adiciona(new Contato("Contato_" + i, "contato" + i + "@mail.com", "9999-999" + i));
 //		}

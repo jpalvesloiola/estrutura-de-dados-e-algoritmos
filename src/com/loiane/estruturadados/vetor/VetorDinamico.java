@@ -49,12 +49,12 @@ public class VetorDinamico<T> {
 	 */
 	public void remove(int posicao) {
 		this.validaPosicao(posicao);
-		for (int i = posicao; i < this.tamanho - 1; i++) {
+		for (int i = posicao; i < this.tamanho - 1; i++) { 
 			this.elementos[i] = this.elementos[i + 1];
 		}
 		this.tamanho--;
 	}
-	
+
 	/**
 	 * Remove um elemento do Vetor de acordo com o elemento passado como parametro.
 	 * 
@@ -64,14 +64,14 @@ public class VetorDinamico<T> {
 		int posicao = this.busca(elemento);
 		if (posicao > -1) {
 			this.remove(posicao);
-		}else {
+		} else {
 			return;
 		}
-		
+
 	}
-	
+
 	/**
-	 * Limpa todos os elementos da array. 
+	 * Limpa todos os elementos da array.
 	 */
 	public void limpa() {
 		for (int i = 0; i < this.elementos.length; i++) {
@@ -92,8 +92,8 @@ public class VetorDinamico<T> {
 	}
 
 	/**
-	 * Verifica se elemento existe no vetor e retorna a
-	 * posicao. Sbreescrita do metodo anterior. Algoritmo de busca sequencial.
+	 * Verifica se elemento existe no vetor e retorna a posicao. Sbreescrita do
+	 * metodo anterior. Algoritmo de busca sequencial.
 	 * 
 	 * @param elemento
 	 * @return inteiro >= 0 (posicao) ou -1 se nada for encontrado.
@@ -108,9 +108,10 @@ public class VetorDinamico<T> {
 
 		return -1;
 	}
-	
+
 	/**
 	 * Verifica se elemento existe no vetor com busca sequencial.
+	 * 
 	 * @param elemento
 	 * @return true de existe ou false senao existe.
 	 */
@@ -118,14 +119,15 @@ public class VetorDinamico<T> {
 
 		return busca(elemento) > -1;
 	}
-	
+
 	/**
 	 * Passa a ultima ocorrencia do elemento no vetor
+	 * 
 	 * @param elemento
 	 * @return
 	 */
 	public int ultimoIndice(T elemento) {
-		
+
 		for (int i = this.tamanho - 1; i >= 0; i--) {
 			if (elementos[i].equals(elemento)) {
 				return i;
@@ -153,6 +155,7 @@ public class VetorDinamico<T> {
 		if (posicao < 0 || posicao > this.tamanho) {
 			throw new IllegalArgumentException("Posicao invalida!");
 		}
+
 	}
 
 	public int tamanho() {
@@ -162,13 +165,13 @@ public class VetorDinamico<T> {
 	@Override
 	public String toString() {
 		StringBuilder string = new StringBuilder();
-		string.append("Vetor elementos = ");
+		string.append("Contatos = ");
 		string.append("[");
 		for (int i = 0; i < this.tamanho; i++) {
 			string.append(this.elementos[i]);
 			if (i < this.tamanho) {
 				string.append(", ");
-			} 
+			}
 		}
 		string.append("]");
 		return string.toString();
