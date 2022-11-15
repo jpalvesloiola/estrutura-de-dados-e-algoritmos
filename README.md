@@ -54,7 +54,7 @@
 - Exercícios✅
 
 # Pilha (Stack)
-- Definição
+- Definição✅
 - Verificar quantidades de elementos na pilha
 - Empilhar elemento
 - Verificar se a pilha está vazia
@@ -63,7 +63,7 @@
 - API Java Stack
 
 # Fila
-- Definição✅
+- Definição
 - Adicionar elementos ao final do vetor
 - Verificar quantidades de elementos no vetor
 - Imprimir elementos do vetor
