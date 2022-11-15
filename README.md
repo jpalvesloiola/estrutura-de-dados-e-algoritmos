@@ -1,6 +1,6 @@
 # **Estrutura de Dados e Algoritmos com Java**
 ## Conteúdo do curso: Estrutura de dados.
-- [Vetor(Array)][vetor] ✅
+- [Vetor(Array)][vetor]
 - [Pilha(Stack)][pilha]
 - [Fila(Queue)][fila]
 - [Lista Encadeada(Linked List)][lista-encadeada]
