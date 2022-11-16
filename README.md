@@ -18,7 +18,7 @@
   - Merge Sort;
   - Quick Sort.
 - Algoritmos de Busca e Pesquisa:
-  - Busca Sequêncial✅
+  - Busca Sequêncial
   - Busca Binária.
  
 ## Definição de Estruturas de Dados.
