@@ -1,5 +1,13 @@
 package com.loiane.estruturadados.vetor;
 
+/**
+ * Esta classe representa a estrutura de dados do tipo Array com as seguintes características:
+ *  - Linear;
+ *  - Homogêneo(Possui todos os elementos do mesmo tipo);
+ *  - Dinâminca(capacidade de aumentar de tamanho). 
+ * @author jpalv
+ *
+ */
 public class Vetor {
 	private Object[] elementos;
 	private int tamanho;

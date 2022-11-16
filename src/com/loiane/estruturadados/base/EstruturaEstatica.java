@@ -1,21 +1,24 @@
-package com.loiane.estruturadados.vetor;
+package com.loiane.estruturadados.base;
 
 /**
- * Esta classe é um aprimoramento da classe Vetor com as seguintes características:
- *  - Linear;
- *  - Heterogêneo(Pode possuir elementos de tipos diferentes);
- *  - Dinâminca(capacidade de aumentar de tamanho). 
+ * Classe referencia para os tipos de estrutura de dados estaticos.
+ * 
  * @author jpalv
  *
+ * @param <T>
  */
-public class VetorDinamico<T> {
+public abstract class EstruturaEstatica<T> {
 	private T[] elementos;
 	private int tamanho;
 
 	@SuppressWarnings("unchecked")
-	public VetorDinamico(int capacidade) {
+	public EstruturaEstatica(int capacidade) {
 		this.elementos = (T[]) new Object[capacidade];
 		this.tamanho = 0;
+	}
+
+	public EstruturaEstatica() {
+		this(10);
 	}
 
 	/**
@@ -23,7 +26,7 @@ public class VetorDinamico<T> {
 	 * 
 	 * @param elemento
 	 */
-	public void adiciona(T elemento) {
+	protected void adiciona(T elemento) {
 		this.aumentaCapacidade();
 		if (this.tamanho < this.elementos.length) {
 			this.elementos[this.tamanho] = elemento;
@@ -38,7 +41,7 @@ public class VetorDinamico<T> {
 	 * @param elemento
 	 * @param posicao
 	 */
-	public void adiciona(T elemento, int posicao) {
+	protected void adiciona(T elemento, int posicao) {
 		this.validaPosicao(posicao);
 
 		this.aumentaCapacidade();
@@ -57,35 +60,10 @@ public class VetorDinamico<T> {
 	 */
 	public void remove(int posicao) {
 		this.validaPosicao(posicao);
-		for (int i = posicao; i < this.tamanho - 1; i++) { 
+		for (int i = posicao; i < this.tamanho - 1; i++) {
 			this.elementos[i] = this.elementos[i + 1];
 		}
 		this.tamanho--;
-	}
-
-	/**
-	 * Remove um elemento do Vetor de acordo com o elemento passado como parametro.
-	 * 
-	 * @param elemento a ser removido.
-	 */
-	public void remove(T elemento) {
-		int posicao = this.busca(elemento);
-		if (posicao > -1) {
-			this.remove(posicao);
-		} else {
-			return;
-		}
-
-	}
-
-	/**
-	 * Limpa todos os elementos da array.
-	 */
-	public void limpa() {
-		for (int i = 0; i < this.elementos.length; i++) {
-			this.elementos[i] = null;
-		}
-		this.tamanho = 0;
 	}
 
 	/**
@@ -118,38 +96,11 @@ public class VetorDinamico<T> {
 	}
 
 	/**
-	 * Verifica se elemento existe no vetor com busca sequencial.
-	 * 
-	 * @param elemento
-	 * @return true de existe ou false senao existe.
-	 */
-	public boolean contem(T elemento) {
-
-		return busca(elemento) > -1;
-	}
-
-	/**
-	 * Passa a ultima ocorrencia do elemento no vetor
-	 * 
-	 * @param elemento
-	 * @return
-	 */
-	public int ultimoIndice(T elemento) {
-
-		for (int i = this.tamanho - 1; i >= 0; i--) {
-			if (elementos[i].equals(elemento)) {
-				return i;
-			}
-		}
-		return -1;
-	}
-
-	/**
 	 * Caso o array fique cheio este metodo e acionado autmaticamente pelo o
 	 * Adiciona().
 	 */
 	@SuppressWarnings("unchecked")
-	private void aumentaCapacidade() {
+	protected void aumentaCapacidade() {
 		if (this.tamanho == this.elementos.length) {
 			T[] novoElementos = (T[]) new Object[this.elementos.length * 2];
 			for (int i = 0; i < this.elementos.length; i++) {
@@ -177,7 +128,7 @@ public class VetorDinamico<T> {
 		string.append("[");
 		for (int i = 0; i < this.tamanho; i++) {
 			string.append(this.elementos[i]);
-			if (i < this.tamanho) {
+			if (i < this.tamanho - 1) {
 				string.append(", ");
 			}
 		}
