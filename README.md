@@ -59,8 +59,8 @@
 > LIFO - Last In, First Out, ou “o último a entrar é o primeiro a sair”
 - Definição✅
 - Verificar quantidades de elementos na pilha✅
-- Empilhar elemento
-- Verificar se a pilha está vazia
+- Empilhar elemento✅
+- Verificar se a pilha está vazia✅
 - Espiar/Verificar se elemento está no topo da pilha
 - Desempilhar elemento da pilha
 - API Java Stack
