@@ -55,7 +55,7 @@
 
 # Pilha (Stack)
 - Definição✅
-- Verificar quantidades de elementos na pilha
+- Verificar quantidades de elementos na pilha✅
 - Empilhar elemento
 - Verificar se a pilha está vazia
 - Espiar/Verificar se elemento está no topo da pilha
