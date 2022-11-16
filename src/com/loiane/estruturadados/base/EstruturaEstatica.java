@@ -120,6 +120,10 @@ public abstract class EstruturaEstatica<T> {
 	public int tamanho() {
 		return this.tamanho;
 	}
+	
+	public boolean estaVazia() {
+		return this.tamanho == 0;
+	}
 
 	@Override
 	public String toString() {
