@@ -38,7 +38,7 @@
 - Organizar relacionamentos de redes sociais, Twitter e Facebook por exemplo e GPSs:
   >_Grafos_.
 
-# Vetor (Array)
+# Vetor
 - Definição✅
   > Um vetor (ou array) é a estrutura de dados mais simples que existe. <br>
   > Um vetor armazena uma sequência de valores onde todos são do mesmo tipo.
@@ -56,7 +56,8 @@
 - API java ArrayList✅
 - Exercícios✅
 
-# Pilha (Stack)
+# Pilha
+> LIFO - Last In, First Out, ou “o último a entrar é o primeiro a sair”
 - Definição✅
 - Verificar quantidades de elementos na pilha✅
 - Empilhar elemento
