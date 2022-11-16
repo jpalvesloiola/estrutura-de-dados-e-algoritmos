@@ -42,7 +42,7 @@
 - Definição✅
   > Um vetor (ou array) é a estrutura de dados mais simples que existe. <br>
   > Um vetor armazena uma sequência de valores onde todos são do mesmo tipo.
-  > -Loiane Groner.
+  > --Loiane Groner.
 - Adicionar elementos ao final do vetor✅
 - Verificar quantidades de elementos no vetor✅
 - Imprimir elementos do vetor✅
