@@ -8,14 +8,21 @@ package com.loiane.estruturadados.base;
  * @param <T>
  */
 public abstract class EstruturaEstatica<T> {
-	private T[] elementos;
-	private int tamanho;
+	protected T[] elementos;
+	protected int tamanho;
+
+	
+
+	public int getTamanho() {
+		return tamanho;
+	}
 
 	@SuppressWarnings("unchecked")
 	public EstruturaEstatica(int capacidade) {
 		this.elementos = (T[]) new Object[capacidade];
 		this.tamanho = 0;
 	}
+	
 
 	public EstruturaEstatica() {
 		this(10);
@@ -115,10 +122,6 @@ public abstract class EstruturaEstatica<T> {
 			throw new IllegalArgumentException("Posicao invalida!");
 		}
 
-	}
-
-	public int tamanho() {
-		return this.tamanho;
 	}
 	
 	public boolean estaVazia() {

@@ -1,4 +1,4 @@
-package com.loiane.estruturadados.vetor.aulas;
+package com.loiane.estruturadados.pilha.aulas;
 
 import com.loiane.estruturadados.pilha.Pilha;
 
@@ -9,7 +9,7 @@ public class Aula14 {
 			pilha.empilha(i);
 		}
 		System.out.println(pilha);
-		System.out.println(pilha.tamanho());
+		System.out.println("Tamanho: " + pilha.getTamanho());
 	}
 	
 }

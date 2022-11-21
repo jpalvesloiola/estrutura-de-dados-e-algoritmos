@@ -8,9 +8,11 @@ public class Lista<T> extends EstruturaEstatica<T> {
 		super();
 	}
 	
+	/**
+	 * @param capacidade
+	 */
 	public Lista(int capacidade) {
 		super(capacidade);
-		// TODO Auto-generated constructor stub
 	}
 
 	/**
