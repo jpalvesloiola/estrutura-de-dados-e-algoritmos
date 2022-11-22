@@ -12,7 +12,7 @@ public class Exer02 {
         Scanner scan = new Scanner(System.in);
         int numero;
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
             System.out.println("Digite um número:");
             numero = scan.nextInt();
             if(numero == 0){
@@ -22,7 +22,7 @@ public class Exer02 {
                 if( desempilhado == null) {
                     System.out.println("Pilha Par está vazia!");
                 }else{
-                    System.out.println("Desempilha: " + par.desempilha());
+                    System.out.println("\nDesempilha da pilha Par: " + desempilhado);
                 }
 
                 desempilhado = (Integer) impar.desempilha();
@@ -30,14 +30,18 @@ public class Exer02 {
                 if(desempilhado == null) {
                     System.out.println("Pilha Impar está vazia!");
                 }else{ 
-                    System.out.println("Desempilha: " + impar.desempilha());
+                    System.out.println("Desempilha da pilha ìmpar: " + desempilhado);
                 }
                 
                 
             }else if (numero % 2 == 0) {
+                System.out.println("Empilha número par, segue a pilha:");
                 par.empilha(numero);
+                
             } else{                
+                System.out.println("Empilha número ímpar, segue a pilha:");
                 impar.empilha(numero);
+               
             } 
         }
 
