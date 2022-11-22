@@ -1,36 +1,37 @@
 package com.loiane.estruturadados.pilha.labs;
 
 import java.util.Scanner;
-import java.util.Stack;
+
+import com.loiane.estruturadados.pilha.Pilha;
 
 public class Exer01 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        Stack<Integer> pilha = new Stack<>();
+        Pilha<Integer> pilha = new Pilha<>();
         int numero;
         
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 5; i++) {
+            System.out.println("Digite um número:");
             numero = scan.nextInt();
             if (numero % 2 == 0) {
-                pilha.push(numero);
-            }
-            if (pilha.isEmpty()) {
+                pilha.empilha(numero);
+            } else if(pilha.estaVazia()){
                 System.out.println("Sua pilha está vazia!");
-            }else{
-                pilha.pop();
-            }   
-        }
-        scan.close();
-        if (pilha.isEmpty()) {
-            for (int i = pilha.size(); i >= 0; i--) {
-                System.out.println(pilha);
-                pilha.pop();   
-            }            
-        }else{
-            System.out.println("Sua pilha está vazia!");
+            } else  {
+                System.out.println("Número ímpar! Sua pilha foi reduzida.");
+                pilha.desempilha();
+            }
         }
 
+        System.out.println("\nSua pilha foi conculída: ");
+        System.out.println(pilha);
 
-
+        while (!pilha.estaVazia()) {
+            System.out.println("Desempilhando... " + pilha);
+        }            
+        
+        System.out.println();
+        System.out.println("Sua pilha foi esvaziada!");
+        }
     }
 }
