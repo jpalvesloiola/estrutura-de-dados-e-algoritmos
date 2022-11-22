@@ -61,9 +61,9 @@
 - Verificar quantidades de elementos na pilha✅
 - Empilhar elemento✅
 - Verificar se a pilha está vazia✅
-- Espiar/Verificar se elemento está no topo da pilha
-- Desempilhar elemento da pilha
-- API Java Stack
+- Espiar/Verificar se elemento está no topo da pilha✅
+- Desempilhar elemento da pilha✅
+- API Java Stack✅
 - Exercícios
 
 # Fila

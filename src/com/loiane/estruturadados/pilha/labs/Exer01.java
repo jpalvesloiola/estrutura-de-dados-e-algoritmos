@@ -32,6 +32,6 @@ public class Exer01 {
         
         System.out.println();
         System.out.println("Sua pilha foi esvaziada!");
-        }
+        
     }
 }
