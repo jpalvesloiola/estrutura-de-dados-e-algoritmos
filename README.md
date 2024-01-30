@@ -55,7 +55,7 @@
 - API java ArrayList✅
 - Exercícios✅
 
-# Pilha
+# [Pilha](https://github.com/jpalvesloiola/estrutura-de-dados-e-algoritmos/blob/main/stack.md)
 > LIFO - Last In, First Out, ou “o último a entrar é o primeiro a sair”
 - Definição✅
 - Verificar quantidades de elementos na pilha✅
