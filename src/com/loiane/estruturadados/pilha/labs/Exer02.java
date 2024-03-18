@@ -12,7 +12,7 @@ public class Exer02 {
         Scanner scan = new Scanner(System.in);
         int numero;
 
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 10; i++) {
             System.out.println("Digite um número:");
             numero = scan.nextInt();
             if(numero == 0){
