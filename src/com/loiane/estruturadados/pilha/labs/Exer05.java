@@ -20,7 +20,7 @@ public class Exer05 {
 		Stack<Character> pilha = new Stack<>();
 		
 		for (Character character : palavra.toCharArray()) {
-			pilha.add(character);
+			pilha.push(character);
 		}
 		
 		String palavraInvertida = "";
